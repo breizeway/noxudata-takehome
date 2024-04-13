@@ -3,13 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --color-foreground: #ffffff;
-  --color-background: #f1f5f9;
   --width-max-content: 800px;
-}
-
-body {
-  @apply bg-[var(--color-background)];
 }
 
 main > section {

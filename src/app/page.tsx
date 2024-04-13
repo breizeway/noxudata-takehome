@@ -1,3 +1,9 @@
+import Chat from "@/components/chat";
+
 export default function Home() {
-  return <section>Home</section>;
+  return (
+    <section className="flex flex-col">
+      <Chat />
+    </section>
+  );
 }
