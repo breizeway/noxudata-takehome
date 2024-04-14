@@ -1,5 +1,5 @@
 .resultTableWrapper {
-  @apply bg-white border border-slate-300 rounded-lg overflow-hidden;
+  @apply bg-white border border-slate-300 rounded-lg w-full max-w-full overflow-x-scroll;
 }
 
 .resultTable {

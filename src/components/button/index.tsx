@@ -7,12 +7,12 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: IButtonProps): JSX.Element => {
-  const { theme: themeProp, ...ButtonHTMLAttributes } = props;
+  const { theme: themeProp, className, ...ButtonHTMLAttributes } = props;
   const theme = themeProp ?? "primary";
 
   return (
     <button
-      className={[styles.button, styles[theme]].join(" ")}
+      className={[styles.button, styles[theme], className].join(" ")}
       {...ButtonHTMLAttributes}
     />
   );

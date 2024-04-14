@@ -1,0 +1,39 @@
+.chatBox {
+  @apply bg-white p-8 pt-4 border-t border-slate-300;
+}
+
+.chatBox button {
+  @apply whitespace-nowrap;
+}
+
+.chatBoxInner {
+  @apply width-max-content flex flex-col gap-4;
+}
+
+.boxButtons {
+  @apply flex gap-4 flex-wrap;
+}
+
+.chatControls {
+  @apply flex gap-4;
+}
+
+.inputCombo {
+  @apply grow flex;
+}
+
+.inputContainer {
+  @apply relative grow flex items-center;
+}
+
+.input {
+  @apply w-20 h-full grow pl-3 pr-12 border border-slate-300 rounded-md rounded-l-none;
+}
+
+.inputIconButton {
+  @apply absolute top-0 bottom-0 right-0 flex items-center z-10 px-3;
+}
+
+.chatButton {
+  @apply rounded-r-none border-r-0 flex gap-2 items-center px-3;
+}

@@ -11,7 +11,7 @@
 }
 
 .messageContent {
-  @apply w-full;
+  @apply grow min-w-0;
 }
 
 .textContainer {
