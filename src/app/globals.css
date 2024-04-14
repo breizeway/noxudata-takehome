@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --width-max-content: 800px;
+  --width-max-content: 50rem;
 }
 
 main > section {
   @apply grow;
+}
+
+input::placeholder {
+  @apply text-slate-400;
 }

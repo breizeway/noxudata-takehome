@@ -1,5 +1,5 @@
 .comp {
-  @apply bg-white border border-slate-300 rounded-xl w-full;
+  @apply bg-white border border-slate-300 rounded-xl w-full overflow-hidden;
 }
 
 .scrollContainer {
@@ -16,7 +16,7 @@
 }
 
 .headerRow > th {
-  @apply font-normal text-slate-500 text-start;
+  @apply text-slate-500 text-start font-medium text-opacity-90;
 }
 
 .table th,
