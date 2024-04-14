@@ -3,11 +3,11 @@
 }
 
 .message {
-  @apply flex items-center gap-2 border-r border-slate-300 px-2 py-1;
+  @apply flex items-center gap-2 border-r border-slate-300 px-2 pr-3 py-1;
 }
 
 .button {
-  @apply flex whitespace-nowrap items-center gap-2 px-2 py-1;
+  @apply flex whitespace-nowrap items-center gap-2 px-2 pl-3 py-1;
 }
 
 .text {

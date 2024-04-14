@@ -35,5 +35,5 @@
 }
 
 .chatButton {
-  @apply rounded-r-none border-r-0 flex gap-2 items-center px-3;
+  @apply rounded-r-none border-r-0 flex gap-2 items-center px-3 text-base font-normal;
 }

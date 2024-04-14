@@ -31,7 +31,11 @@ const ChatBox = (): JSX.Element => {
               />
             </Button>
             <div className={styles.inputContainer}>
-              <input className={styles.input} type="text" />
+              <input
+                className={styles.input}
+                type="text"
+                placeholder="Start a new chat"
+              />
               <button className={styles.inputIconButton}>
                 <Image
                   src="/icons/send.svg"

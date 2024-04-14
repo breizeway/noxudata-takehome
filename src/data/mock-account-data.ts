@@ -54,13 +54,4 @@ export const mockAccountData: Account[] = [
     segment: "Enterprise",
     ownerId: 7,
   },
-  {
-    id: 477,
-    name: "Abbott - Pacocha",
-    industry: "IT",
-    city: "Colorado City",
-    state: "CO",
-    segment: "Enterprise",
-    ownerId: 7,
-  },
 ];

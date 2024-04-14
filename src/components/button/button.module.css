@@ -1,5 +1,5 @@
 .comp {
-  @apply border rounded-md px-4 py-2;
+  @apply border rounded-md px-4 py-2 text-sm font-medium;
 }
 
 .primary {
