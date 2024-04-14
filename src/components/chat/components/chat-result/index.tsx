@@ -1,8 +1,7 @@
 import Image from "next/image";
-import React from "react";
-import { ConfidenceBadge } from "./components/confidence-badge";
-
-const NOXU_LOGO_MARK = "/icons/logo-mark.svg";
+import ConfidenceBadge from "./components/confidence-badge";
+import ResultTable from "./components/result-table";
+import styles from "./chat-result.module.css";
 
 interface ChatResultProps {
   answer: string;
@@ -10,24 +9,26 @@ interface ChatResultProps {
 
 export const ChatResult = ({ answer }: ChatResultProps): JSX.Element => {
   return (
-    <div className="bg-slate-100 grow p-8">
-      <div className="width-max-content flex flex-col gap-4">
+    <div className={styles.chatResult}>
+      <div className={styles.resultInner}>
         <ConfidenceBadge />
-        <div className="flex items-start gap-4">
+        <div className={styles.noxuMessage}>
           <Image
-            src={NOXU_LOGO_MARK}
+            src={"/icons/logo-mark.svg"}
             alt="Noxu logo mark"
             height={40}
             width={40}
           />
-          <div>
-            <div className="min-h-10 flex items-center mb-2">
+          <div className={styles.messageContent}>
+            <div className={styles.textContainer}>
               <span>{answer}</span>
             </div>
-            <div className="bg-white w-full h-10 rounded-lg border border-slate-300 mb-2"></div>
+            <ResultTable />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default ChatResult;

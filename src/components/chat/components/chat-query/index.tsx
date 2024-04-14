@@ -1,19 +1,17 @@
-import React from "react";
-
-// import "./ChatQuery.css";
 import { User } from "@/types";
 import Image from "next/image";
+import styles from "./chat-query.module.css";
 
 interface ChatQueryProps {
   prompt: string;
   user: User;
 }
 
-export const ChatQuery = ({ prompt, user }: ChatQueryProps): JSX.Element => {
+const ChatQuery = ({ prompt, user }: ChatQueryProps): JSX.Element => {
   return (
-    <div className="p-8 bg-white">
-      <div className="width-max-content flex items-center gap-4">
-        <div className="rounded-full overflow-clip min-w-fit min-h-fit">
+    <div className={styles.chatQuery}>
+      <div className={styles.queryInner}>
+        <div className={styles.userImageClip}>
           <Image
             src={user.image}
             alt="User profile image"
@@ -26,3 +24,5 @@ export const ChatQuery = ({ prompt, user }: ChatQueryProps): JSX.Element => {
     </div>
   );
 };
+
+export default ChatQuery;

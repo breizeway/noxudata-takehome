@@ -1,0 +1,19 @@
+.chatResult {
+  @apply bg-slate-100 grow p-8;
+}
+
+.resultInner {
+  @apply width-max-content flex flex-col gap-4;
+}
+
+.noxuMessage {
+  @apply flex items-start gap-4;
+}
+
+.messageContent {
+  @apply w-full;
+}
+
+.textContainer {
+  @apply min-h-10 flex items-center mb-2;
+}

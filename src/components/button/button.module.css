@@ -1,0 +1,11 @@
+.button {
+  @apply border rounded-md px-4 py-2;
+}
+
+.primary {
+  @apply border-slate-300;
+}
+
+.terminal {
+  @apply border-red-600 text-red-600;
+}

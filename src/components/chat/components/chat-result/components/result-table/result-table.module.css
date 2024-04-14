@@ -1,0 +1,66 @@
+.resultTableWrapper {
+  @apply bg-white border border-slate-300 rounded-lg overflow-hidden;
+}
+
+.resultTable {
+  @apply border-slate-300;
+}
+
+.resultTable tr {
+  @apply border-b;
+}
+
+.headerButton {
+  @apply flex w-full gap-2.5 items-center;
+}
+
+.headerRow > th {
+  @apply font-normal text-slate-500 text-start min-w-max;
+}
+
+.resultTable th,
+.resultTable td {
+  @apply p-2 whitespace-nowrap;
+}
+
+.resultTable th:first-child,
+.resultTable td:first-child {
+  @apply pl-4;
+}
+
+.resultTable th:last-child,
+.resultTable td:last-child {
+  @apply pr-4;
+}
+
+.resultTable tbody td {
+  @apply w-1/6;
+}
+
+.condensed {
+  @apply max-w-0 overflow-hidden text-ellipsis;
+}
+
+.resultTable tfoot tr:last-child {
+  @apply border-0;
+}
+
+.resultTable tfoot td {
+  @apply !px-3;
+}
+
+.footerInfo {
+  @apply bg-slate-50 font-semibold text-slate-600;
+}
+
+.infoMessageContainer {
+  @apply flex items-center gap-1.5 justify-between;
+}
+
+.infoMessage {
+  @apply flex items-center gap-1.5;
+}
+
+.footerButtons {
+  @apply flex gap-4 py-1;
+}

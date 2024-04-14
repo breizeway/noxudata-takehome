@@ -1,0 +1,15 @@
+.confidenceBadge {
+  @apply flex w-fit bg-white border border-slate-300 rounded-md text-warning font-semibold;
+}
+
+.badgeMessage {
+  @apply flex items-center gap-2 border-r border-slate-300 px-2 py-1;
+}
+
+.badgeButton {
+  @apply flex whitespace-nowrap items-center gap-2 px-2 py-1;
+}
+
+.badgeText {
+  @apply whitespace-nowrap overflow-ellipsis overflow-hidden;
+}
