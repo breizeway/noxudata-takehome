@@ -1,24 +1,22 @@
-import { Button } from "@/components/button";
+import Button from "@/components/button";
 import styles from "./chat-box.module.css";
 import Image from "next/image";
 
-interface ChatBoxProps {}
-
-const ChatBox = ({}: ChatBoxProps): JSX.Element => {
+const ChatBox = (): JSX.Element => {
   return (
-    <div className={styles.chatBox}>
-      <div className={styles.chatBoxInner}>
-        <div className={styles.boxButtons}>
+    <div className={styles.comp}>
+      <div className={styles.inner}>
+        <div className={styles.buttons}>
           <Button>Suggest Question 1</Button>
           <Button>Suggest Question 2</Button>
           <Button>Suggest Question 3</Button>
         </div>
-        <div className={styles.chatControls}>
+        <div className={styles.controls}>
           <div className={styles.inputCombo}>
             <Button className={styles.chatButton}>
               <Image
                 src={"/icons/message-circle.svg"}
-                alt="User profile image"
+                alt="Chat bubble"
                 height={24}
                 width={24}
                 className="min-w-6"

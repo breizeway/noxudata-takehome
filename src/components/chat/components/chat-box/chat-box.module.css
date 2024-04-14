@@ -1,20 +1,20 @@
-.chatBox {
+.comp {
   @apply bg-white p-8 pt-4 border-t border-slate-300;
 }
 
-.chatBox button {
+.comp button {
   @apply whitespace-nowrap;
 }
 
-.chatBoxInner {
+.inner {
   @apply width-max-content flex flex-col gap-4;
 }
 
-.boxButtons {
+.buttons {
   @apply flex gap-4 flex-wrap;
 }
 
-.chatControls {
+.controls {
   @apply flex gap-4;
 }
 

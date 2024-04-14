@@ -1,19 +1,18 @@
-import { User } from "@/types";
 import Image from "next/image";
 import styles from "./chat-query.module.css";
 
 interface ChatQueryProps {
   prompt: string;
-  user: User;
+  userImage: string;
 }
 
-const ChatQuery = ({ prompt, user }: ChatQueryProps): JSX.Element => {
+const ChatQuery = ({ prompt, userImage }: ChatQueryProps): JSX.Element => {
   return (
-    <div className={styles.chatQuery}>
-      <div className={styles.queryInner}>
+    <div className={styles.comp}>
+      <div className={styles.inner}>
         <div className={styles.userImageClip}>
           <Image
-            src={user.image}
+            src={userImage}
             alt="User profile image"
             height={40}
             width={40}

@@ -5,9 +5,9 @@ import styles from "./chat.module.css";
 
 export const Chat = (): JSX.Element => {
   return (
-    <div className={styles.chat}>
+    <div className={styles.comp}>
       <ChatQuery
-        user={{ image: "/images/user-1.png" }}
+        userImage="/images/user-1.png"
         prompt="List my top 10 accounts"
       />
       <ChatResult answer="To find out how many accounts you have, you can use the following query:" />

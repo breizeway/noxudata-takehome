@@ -9,8 +9,8 @@ interface ChatResultProps {
 
 export const ChatResult = ({ answer }: ChatResultProps): JSX.Element => {
   return (
-    <div className={styles.chatResult}>
-      <div className={styles.resultInner}>
+    <div className={styles.comp}>
+      <div className={styles.inner}>
         <ConfidenceBadge />
         <div className={styles.noxuMessage}>
           <Image

@@ -1,8 +1,8 @@
-.chatQuery {
+.comp {
   @apply p-8 bg-white;
 }
 
-.queryInner {
+.inner {
   @apply width-max-content flex items-center gap-4;
 }
 

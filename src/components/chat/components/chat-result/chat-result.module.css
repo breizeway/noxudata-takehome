@@ -1,8 +1,8 @@
-.chatResult {
+.comp {
   @apply bg-slate-100 grow p-8;
 }
 
-.resultInner {
+.inner {
   @apply width-max-content flex flex-col gap-4;
 }
 

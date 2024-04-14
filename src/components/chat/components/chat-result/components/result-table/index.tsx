@@ -2,32 +2,32 @@ import React from "react";
 import styles from "./result-table.module.css";
 import Image from "next/image";
 import { mockAccountData } from "@/data/mock-account-data";
-import { Button } from "@/components/button";
+import Button from "@/components/button";
 
 const ResultTable = (): JSX.Element => {
   const numColumns = Object.keys(mockAccountData[0] ?? {}).length || 1;
 
   return (
-    <div className={styles.resultTableWrapper}>
+    <div className={styles.comp}>
       <div className={styles.scrollContainer}>
-        <table className={styles.resultTable}>
+        <table className={styles.table}>
           <thead>
             <tr className={styles.headerRow}>
-              <th>
+              <th scope="col">
                 <HeaderButton />
               </th>
-              <th>
+              <th scope="col">
                 <HeaderButton label="Name" />
               </th>
-              <th>Industry</th>
-              <th>
+              <th scope="col">Industry</th>
+              <th scope="col">
                 <HeaderButton label="City" />
               </th>
-              <th>
+              <th scope="col">
                 <HeaderButton label="State" />
               </th>
-              <th>Segment</th>
-              <th>
+              <th scope="col">Segment</th>
+              <th scope="col">
                 <HeaderButton label="Owner ID" />
               </th>
             </tr>
@@ -49,7 +49,7 @@ const ResultTable = (): JSX.Element => {
       </div>
       <div className={styles.footerInfo}>
         <div className={styles.infoMessageContainer}>
-          <span className={styles.infoMessage}>
+          <span>
             <Image
               src="/icons/info.svg"
               alt="Info"
@@ -81,8 +81,6 @@ const ResultTable = (): JSX.Element => {
 };
 
 const HeaderButton = ({ label }: { label?: string }): JSX.Element => (
-  // TODO check all alts
-  // TOOD consistent exports
   <button className={styles.headerButton}>
     {label}
     <Image
