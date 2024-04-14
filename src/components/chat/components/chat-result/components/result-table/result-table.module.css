@@ -1,5 +1,8 @@
 .resultTableWrapper {
-  @apply bg-white border border-slate-300 rounded-lg w-full max-w-full overflow-x-scroll;
+  @apply bg-white border border-slate-300 rounded-lg w-full;
+}
+.scrollContainer {
+  @apply max-w-full overflow-x-scroll;
 }
 
 .resultTable {
@@ -41,16 +44,8 @@
   @apply max-w-0 overflow-hidden text-ellipsis;
 }
 
-.resultTable tfoot tr:last-child {
-  @apply border-0;
-}
-
-.resultTable tfoot td {
-  @apply !px-3;
-}
-
 .footerInfo {
-  @apply bg-slate-50 font-semibold text-slate-600;
+  @apply bg-slate-50 font-semibold text-slate-600 px-3 py-2;
 }
 
 .infoMessageContainer {
@@ -58,9 +53,13 @@
 }
 
 .infoMessage {
-  @apply flex items-center gap-1.5;
+  @apply inline;
 }
 
 .footerButtons {
-  @apply flex gap-4 py-1;
+  @apply flex flex-wrap gap-4 p-3;
+}
+
+.footerButtons button {
+  @apply whitespace-nowrap;
 }

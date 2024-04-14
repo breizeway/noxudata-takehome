@@ -9,79 +9,73 @@ const ResultTable = (): JSX.Element => {
 
   return (
     <div className={styles.resultTableWrapper}>
-      <table className={styles.resultTable}>
-        <thead>
-          <tr className={styles.headerRow}>
-            <th>
-              <HeaderButton />
-            </th>
-            <th>
-              <HeaderButton label="Name" />
-            </th>
-            <th>Industry</th>
-            <th>
-              <HeaderButton label="City" />
-            </th>
-            <th>
-              <HeaderButton label="State" />
-            </th>
-            <th>Segment</th>
-            <th>
-              <HeaderButton label="Owner ID" />
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {mockAccountData.map((account, idx) => (
-            <tr key={idx}>
-              <td className="!w-auto">{account.id}</td>
-              <td className="!w-1/2">{account.name}</td>
-              <td>{account.industry}</td>
-              <td className={styles.condensed}>{account.city}</td>
-              <td>{account.state}</td>
-              <td className={styles.condensed}>{account.segment}</td>
-              <td>{account.ownerId}</td>
+      <div className={styles.scrollContainer}>
+        <table className={styles.resultTable}>
+          <thead>
+            <tr className={styles.headerRow}>
+              <th>
+                <HeaderButton />
+              </th>
+              <th>
+                <HeaderButton label="Name" />
+              </th>
+              <th>Industry</th>
+              <th>
+                <HeaderButton label="City" />
+              </th>
+              <th>
+                <HeaderButton label="State" />
+              </th>
+              <th>Segment</th>
+              <th>
+                <HeaderButton label="Owner ID" />
+              </th>
             </tr>
-          ))}
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colSpan={numColumns} className={styles.footerInfo}>
-              <div className={styles.infoMessageContainer}>
-                <div className={styles.infoMessage}>
-                  <Image
-                    src="/icons/info.svg"
-                    alt="Info"
-                    height={20}
-                    width={20}
-                    className="min-w-5"
-                  />
-                  Only X rows are shown. View full list for more
-                </div>
-                <button>
-                  <Image
-                    src="/icons/x.svg"
-                    alt="Close"
-                    height={20}
-                    width={20}
-                    className="min-w-5"
-                  />
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td colSpan={numColumns}>
-              <div className={styles.footerButtons}>
-                <Button theme="primary">Show Full List</Button>
-                <Button theme="primary">Show Query</Button>
-                <Button theme="primary">Show Chart</Button>
-                <Button theme="primary">Pin to Dashboard</Button>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
+          </thead>
+          <tbody>
+            {mockAccountData.map((account, idx) => (
+              <tr key={idx}>
+                <td className="!w-auto">{account.id}</td>
+                <td className="!w-1/2">{account.name}</td>
+                <td>{account.industry}</td>
+                <td className={styles.condensed}>{account.city}</td>
+                <td>{account.state}</td>
+                <td className={styles.condensed}>{account.segment}</td>
+                <td>{account.ownerId}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className={styles.footerInfo}>
+        <div className={styles.infoMessageContainer}>
+          <span className={styles.infoMessage}>
+            <Image
+              src="/icons/info.svg"
+              alt="Info"
+              height={20}
+              width={20}
+              className="min-w-5 inline mr-1.5 mb-0.5"
+            />
+            Only X rows are shown. View full list for more
+          </span>
+          <button>
+            <Image
+              src="/icons/x.svg"
+              alt="Close"
+              height={20}
+              width={20}
+              className="min-w-5"
+            />
+          </button>
+        </div>
+      </div>
+      <div className={styles.footerButtons}>
+        <Button theme="primary">Show Full List</Button>
+        <Button theme="primary">Show Query</Button>
+        <Button theme="primary">Show Chart</Button>
+        <Button theme="primary">Pin to Dashboard</Button>
+      </div>
     </div>
   );
 };
