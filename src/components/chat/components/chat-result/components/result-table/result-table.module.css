@@ -1,0 +1,58 @@
+.comp {
+  @apply bg-white border border-slate-300 rounded-lg w-full;
+}
+.scrollContainer {
+  @apply max-w-full overflow-x-scroll;
+}
+
+.table tr,
+.footerInfo {
+  @apply border-b;
+}
+
+.headerButton {
+  @apply flex w-full gap-2.5 items-center;
+}
+
+.headerRow > th {
+  @apply font-normal text-slate-500 text-start min-w-max;
+}
+
+.table th,
+.table td {
+  @apply p-2 whitespace-nowrap;
+}
+
+.table th:first-child,
+.table td:first-child {
+  @apply pl-4;
+}
+
+.table th:last-child,
+.table td:last-child {
+  @apply pr-4;
+}
+
+.table tbody td {
+  @apply w-1/6;
+}
+
+.condensed {
+  @apply max-w-0 overflow-hidden text-ellipsis;
+}
+
+.footerInfo {
+  @apply bg-slate-50 font-semibold text-slate-600 px-3 py-2;
+}
+
+.infoMessageContainer {
+  @apply flex gap-1.5 justify-between;
+}
+
+.footerButtons {
+  @apply flex flex-wrap gap-4 p-3;
+}
+
+.footerButtons button {
+  @apply whitespace-nowrap;
+}

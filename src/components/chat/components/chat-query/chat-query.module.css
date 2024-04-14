@@ -1,0 +1,11 @@
+.comp {
+  @apply p-8 bg-white;
+}
+
+.inner {
+  @apply width-max-content flex items-center gap-4;
+}
+
+.userImageClip {
+  @apply rounded-full overflow-hidden min-w-fit min-h-fit;
+}
