@@ -19,14 +19,18 @@ const ResultTable = (): JSX.Element => {
               <th scope="col">
                 <HeaderButton label="Name" />
               </th>
-              <th scope="col">Industry</th>
+              <th scope="col">
+                <HeaderButton label="Industry" />
+              </th>
               <th scope="col">
                 <HeaderButton label="City" />
               </th>
               <th scope="col">
                 <HeaderButton label="State" />
               </th>
-              <th scope="col">Segment</th>
+              <th scope="col">
+                <HeaderButton label="Segment" />
+              </th>
               <th scope="col">
                 <HeaderButton label="Owner ID" />
               </th>
@@ -35,13 +39,13 @@ const ResultTable = (): JSX.Element => {
           <tbody>
             {mockAccountData.map((account, idx) => (
               <tr key={idx}>
-                <td className="!w-auto">{account.id}</td>
-                <td className="!w-1/2">{account.name}</td>
-                <td>{account.industry}</td>
-                <td className={styles.condensed}>{account.city}</td>
-                <td>{account.state}</td>
-                <td className={styles.condensed}>{account.segment}</td>
-                <td>{account.ownerId}</td>
+                <td>{account.id}</td>
+                <td className={styles.expandedCell}>{account.name}</td>
+                <td className={styles.condensedCell}>{account.industry}</td>
+                <td className={styles.condensedCell}>{account.city}</td>
+                <td className={styles.condensedCell}>{account.state}</td>
+                <td className={styles.condensedCell}>{account.segment}</td>
+                <td className={styles.condensedCell}>{account.ownerId}</td>
               </tr>
             ))}
           </tbody>

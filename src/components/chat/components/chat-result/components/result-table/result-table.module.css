@@ -1,13 +1,14 @@
 .comp {
-  @apply bg-white border border-slate-300 rounded-lg w-full;
+  @apply bg-white border border-slate-300 rounded-xl w-full;
 }
+
 .scrollContainer {
   @apply max-w-full overflow-x-scroll;
 }
 
 .table tr,
 .footerInfo {
-  @apply border-b;
+  @apply border-b w-full;
 }
 
 .headerButton {
@@ -15,12 +16,12 @@
 }
 
 .headerRow > th {
-  @apply font-normal text-slate-500 text-start min-w-max;
+  @apply font-normal text-slate-500 text-start;
 }
 
 .table th,
 .table td {
-  @apply p-2 whitespace-nowrap;
+  @apply p-2 whitespace-nowrap overflow-hidden text-ellipsis;
 }
 
 .table th:first-child,
@@ -33,12 +34,12 @@
   @apply pr-4;
 }
 
-.table tbody td {
-  @apply w-1/6;
+.condensedCell {
+  @apply max-w-0;
 }
 
-.condensed {
-  @apply max-w-0 overflow-hidden text-ellipsis;
+.expandedCell {
+  @apply w-full;
 }
 
 .footerInfo {
