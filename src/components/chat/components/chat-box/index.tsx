@@ -1,8 +1,20 @@
+"use client";
+
 import Button from "@/components/button";
 import styles from "./chat-box.module.css";
 import Image from "next/image";
+import { FormEvent, useState } from "react";
+import { socket } from "@/socket.mjs";
 
 const ChatBox = (): JSX.Element => {
+  const [message, setMessage] = useState("");
+
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    socket.emit("messageSent", message);
+    setMessage("");
+  };
+
   return (
     <div className={styles.comp}>
       <div className={styles.inner}>
@@ -11,7 +23,7 @@ const ChatBox = (): JSX.Element => {
           <Button>Suggest Question 2</Button>
           <Button>Suggest Question 3</Button>
         </div>
-        <div className={styles.controls}>
+        <form className={styles.controls} onSubmit={onSubmit}>
           <div className={styles.inputCombo}>
             <Button className={styles.chatButton}>
               <Image
@@ -32,11 +44,13 @@ const ChatBox = (): JSX.Element => {
             </Button>
             <div className={styles.inputContainer}>
               <input
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className={styles.input}
                 type="text"
                 placeholder="Start a new chat"
               />
-              <button className={styles.inputIconButton}>
+              <button className={styles.inputIconButton} type="submit">
                 <Image
                   src="/icons/send.svg"
                   alt="Send"
@@ -47,8 +61,10 @@ const ChatBox = (): JSX.Element => {
               </button>
             </div>
           </div>
-          <Button theme="terminal">End Chat</Button>
-        </div>
+          <Button theme="terminal" type="button">
+            End Chat
+          </Button>
+        </form>
       </div>
     </div>
   );
