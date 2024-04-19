@@ -1,5 +1,5 @@
 .comp {
-  @apply bg-slate-100 grow p-8;
+  @apply bg-slate-100 grow p-8 flex flex-col gap-6;
 }
 
 .inner {

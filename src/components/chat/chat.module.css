@@ -1,3 +1,7 @@
 .comp {
   @apply grow max-h-full flex flex-col;
 }
+
+.prompt {
+  @apply p-8 bg-white;
+}
